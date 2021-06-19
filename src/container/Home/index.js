@@ -19,7 +19,7 @@ const Home = () =>{
             <Flex justifyContent="center" alignItems="center" m="80px 35px 0px" className="google_auth_container">
                 <Button display="flex" width="100%"
                     backgroundColor="#323242"
-                    onClick={()=> history.push('/collection')}
+                    onClick={()=> history.push('/collections')}
                     _hover={{
                         border: '1px solid #ef80c0',
                         padding: '9.5px',
