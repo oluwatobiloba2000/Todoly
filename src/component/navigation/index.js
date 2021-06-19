@@ -1,10 +1,8 @@
 import React from 'react'
 import { Box, Image, Flex, Button, IconButton } from '@chakra-ui/react';
 import profileImg from '../../img/avataaars.png';
-import { BiCheckCircle } from "react-icons/bi";
 import { RiDashboardFill } from "react-icons/ri";
-import { BsCollectionFill, BsPlus} from "react-icons/bs";
-import { AiOutlineBars } from "react-icons/ai";
+import { BsPlus} from "react-icons/bs";
 import style from './style.module.css';
 
 
