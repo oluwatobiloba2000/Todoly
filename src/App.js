@@ -4,10 +4,11 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
-import { ChakraProvider, theme } from '@chakra-ui/react';
+import { ChakraProvider } from '@chakra-ui/react';
 import Home from './container/Home';
 import Dashboard from './container/Dashboard';
 import SingleCollection from './container/singleCollection';
+import { theme } from './theme';
 // import { ColorModeSwitcher } from './ColorModeSwitcher';
 // import { Logo } from './Logo';
 
