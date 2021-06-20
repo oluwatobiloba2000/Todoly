@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 import {Flex, Text} from '@chakra-ui/react';
 import Task from '../task';
 
-function PendingTasks({primaryCustomColor}) {
-    const [pendingTasksCount] = useState(0);
+function CompletedTask({primaryCustomColor}) {
+    const [completedTasksCount] = useState(0);
 
     const data = [{
         text: 'testing the todo app'
@@ -16,12 +16,13 @@ function PendingTasks({primaryCustomColor}) {
     }]
 
 
-    return (
-        <Flex flexDirection="column" mb="20px">
-             <Text color="white" mb="20px">Pending Tasks - {pendingTasksCount}</Text>
 
-            {data.map((data, index)=>{
-               return <Task status="not-completed" text={data.text} id={index}
+    return (
+        <Flex flexDirection="column" mb="20px" mt="40px">
+             <Text color="white" mb="20px">Completed Tasks - {completedTasksCount}</Text>
+
+             {data.map((data, index)=>{
+               return <Task status="completed" text={data.text} id={index}
                     primaryCustomColor={primaryCustomColor}
                 />}
             )}
@@ -29,4 +30,4 @@ function PendingTasks({primaryCustomColor}) {
     )
 }
 
-export default PendingTasks
+export default CompletedTask;

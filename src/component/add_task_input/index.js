@@ -12,7 +12,7 @@ import { MdClear } from "react-icons/md";
 dayjs.extend(relativeTime)
 
 export default function AddTaskInput({ primaryCustomColor, getTaskValue }) {
-    const [datePickerValue, setDatePickerValue] = useState(new Date());
+    const [datePickerValue, setDatePickerValue] = useState("");
     const [onOpenDatePicker, setOpenDatePicker] = useState(false)
 
     const { register, handleSubmit, formState: { errors } } = useForm();
@@ -66,7 +66,6 @@ export default function AddTaskInput({ primaryCustomColor, getTaskValue }) {
                                     <Text className={style.add_task_due_date}>{datePickerValue ?  <> Due in : {dayjs(datePickerValue).format("D MMM YYYY [at] h [:] mm a")} <Text ml="10px" className={style.due_date_from_now_text} as="span" color={primaryCustomColor}>{dayjs(datePickerValue).fromNow()} </Text> </> : 'Set due date & time'}</Text>
                                 </Flex>
 
-                               {/* { console.log({onOpenDatePicker, datePickerValue})} */}
                                 <DateTimePicker
                                     clearIcon={MdClear({
                                         style: {
