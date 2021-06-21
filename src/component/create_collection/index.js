@@ -79,7 +79,7 @@ function CreateCollection({ isOpenCollectionModal, onOpenCollectionModal, onClos
          
         >
             <ModalOverlay />
-            <ModalContent background="#21212d" color="white"  borderRadius="13px">
+            <ModalContent width="90%" background="#21212d" color="white"  borderRadius="13px">
                 <ModalHeader>Create Collection</ModalHeader>
                 <ModalCloseButton />
                 <ModalBody>

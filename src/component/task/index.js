@@ -13,7 +13,8 @@ import {
   AlertTitle,
   AlertDescription,
 } from "@chakra-ui/react"
-import { Spinner } from "@chakra-ui/react"
+import { Spinner } from "@chakra-ui/react";
+import style from './task.module.css';
 
 export default function Task({ status, text, id, primaryCustomColor }) {
 
@@ -174,7 +175,7 @@ export default function Task({ status, text, id, primaryCustomColor }) {
 
                 {/* errors arena */}
                 <Collapse in={openEdit} animateOpacity>
-                    <Alert status="error" 
+                    <Alert className={style.error} status="error" 
                         borderRadius="6px"
                         marginTop="5px"
                         marginBottom="10px"

@@ -22,8 +22,8 @@ const Dashboard = () =>{
 
                 <Flex flexWrap="wrap"  spacing={10}>
 
-                    <Link to="/collection/1">
-                        <Box className={style.collection_box}>
+                    <Link to="/collection/1" className={style.collection_box_link}>
+                        <Box transition="all 250ms" className={style.collection_box}>
                                 <Box backgroundColor="hsl(301deg 78% 38%)" className={style.collection_box_icon_container}>
                                     <Icon as={BsCollectionFill} color="white" fontSize="25px"/>
                                 </Box>
@@ -38,8 +38,8 @@ const Dashboard = () =>{
                             </Box>
                     </Link>
 
-
-                        <Box className={style.collection_box}>
+                    <Link to="/collection/1" className={style.collection_box_link}>
+                        <Box transition="all 250ms" className={style.collection_box}>
                     
                             <Box backgroundColor="hsl(35deg 61% 48%)" className={style.collection_box_icon_container}>
                                 <Icon as={BsCollectionFill} color="white" fontSize="25px"/>
@@ -56,33 +56,38 @@ const Dashboard = () =>{
                             </Flex>
                         </Box>                    
 
-               
-                    <Box className={style.collection_box}>
-                        <Box backgroundColor="hsl(107deg 78% 38%)" className={style.collection_box_icon_container}>
-                            <Icon as={BsCollectionFill} color="white" fontSize="25px"/>
-                         </Box>
-                         <Text noOfLines={2} className={style.collection_name}>Study</Text>
+                    </Link>
 
-                         <Flex justifyContent="space-between" alignItems="center" mt="8px">
-                           <Text className={style.collection_done_status}>1/8 done</Text>
- 
-                            <CircularProgress value={10} size="20px" color="hsl(107deg 78% 38%)"  thickness="14px" />
-                        </Flex>
-                    </Box>
+                    <Link to="/collection/1" className={style.collection_box_link}>
+                        <Box transition="all 250ms" className={style.collection_box}>
+                            <Box backgroundColor="hsl(107deg 78% 38%)" className={style.collection_box_icon_container}>
+                                <Icon as={BsCollectionFill} color="white" fontSize="25px"/>
+                            </Box>
+                            <Text noOfLines={2} className={style.collection_name}>Study</Text>
 
-                    <Box className={style.collection_box}>
-                         <Box backgroundColor="hsl(182deg 78% 38%)" className={style.collection_box_icon_container}>
-                            <Icon as={BsCollectionFill} color="white" fontSize="25px"/>
-                         </Box>
+                            <Flex justifyContent="space-between" alignItems="center" mt="8px">
+                            <Text className={style.collection_done_status}>1/8 done</Text>
+    
+                                <CircularProgress value={10} size="20px" color="hsl(107deg 78% 38%)"  thickness="14px" />
+                            </Flex>
+                        </Box>                        
+                    </Link>
 
-                         <Text noOfLines={2}  className={style.collection_name}>Private project</Text>
-                    
-                         <Flex justifyContent="space-between" alignItems="center" mt="8px">
-                           <Text className={style.collection_done_status}>3/8 done</Text>
- 
-                            <CircularProgress value={30} size="20px" color="hsl(182deg 78% 38%)"  thickness="14px" />
-                        </Flex>
-                    </Box>
+                    <Link to="/collection/1" className={style.collection_box_link}>
+                        <Box transition="all 250ms" className={style.collection_box}>
+                            <Box backgroundColor="hsl(182deg 78% 38%)" className={style.collection_box_icon_container}>
+                                <Icon as={BsCollectionFill} color="white" fontSize="25px"/>
+                            </Box>
+
+                            <Text noOfLines={2}  className={style.collection_name}>Private project</Text>
+                        
+                            <Flex justifyContent="space-between" alignItems="center" mt="8px">
+                            <Text className={style.collection_done_status}>3/8 done</Text>
+    
+                                <CircularProgress value={30} size="20px" color="hsl(182deg 78% 38%)"  thickness="14px" />
+                            </Flex>
+                        </Box>                        
+                    </Link>
 
                     <Button onClick={onOpenCollectionModal} id={style.add_collection_box}>
                         <Icon as={AiOutlinePlus} color="#3d3f4c" fontSize="25px"/>

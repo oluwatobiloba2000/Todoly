@@ -55,7 +55,7 @@ export default function SingleCollection() {
 
                     {/* collection title */}
                     <Flex w="100%" justifyContent="space-between" ml="20px">
-                        <Text color="white" fontWeight="bold" fontSize="30px">{collectionTitle}</Text>
+                        <Text className={style.collection_title} color="white" fontWeight="bold" fontSize="30px">{collectionTitle}</Text>
 
                         <Menu matchWidth={true} isLazy placement="bottom-end">
                             <MenuButton>

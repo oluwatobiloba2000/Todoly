@@ -11,7 +11,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    margin: 20px;
+    /* margin: 20px; */
     height: 170px;
     width: 180px;
     padding: 18px;
@@ -37,6 +37,9 @@
     border: 3px dashed #2e2f38;
 }
 
+.collection_box_link{
+    margin: 20px;
+}
 #add_collection_box:hover{
     background-color: #20212c;
 }
@@ -55,14 +58,18 @@
 
 @media screen and (max-width: 740px) {
     .collection_container{
-        width: 100%;
+        width: 100% !important;
     }
 
     .collection_box{
-        width: 100%;
+        width: 100% !important;
     }
 
     #add_collection_box{
-        width: 100%;
+        width: 100% !important;
+    }
+
+    .collection_box_link{
+        width: 100% !important;
     }
 }
