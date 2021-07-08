@@ -20,6 +20,7 @@ import { clearTokenInLocalStorage, getTokenFromLocalStorage, isTokenExpired } fr
 import { BsArrowCounterclockwise, BsExclamationOctagonFill } from 'react-icons/bs';
 import { RiLoginCircleFill } from 'react-icons/ri';
 import { HiShieldExclamation } from 'react-icons/hi';
+import { url } from '.';
 
 function App() {
   const dispatch = useDispatch();
@@ -44,7 +45,7 @@ function App() {
       error: null,
       loading: true
     })
-    request('http://localhost:3000/graphql', User, {
+    request(url User, {
       token
     })
       .then((dataFromRequest) => {
