@@ -1,9 +1,0 @@
-.collection_container{
-    width: 728px;
-}
-
-@media screen and (max-width: 740px) {
-    .collection_container{
-        width: 100% !important;
-    }
-}
