@@ -1,0 +1,21 @@
+.container{
+    background-image: url(../../img/signin_balls.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: auto;
+}
+
+.welcome_logo_dash{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.form_container{
+    border-top-left-radius: 25px;
+    width: 300px;
+    min-height: 90%;
+    border-top-right-radius: 25px;
+    border: 1px solid #323242;
+}

@@ -1,0 +1,88 @@
+#add_task_input{
+    color: white;
+    border: 2px solid #21212b;
+}
+
+/* #add_task_input:focus, #add_task_input:active {
+    height: 80px;
+    padding-bottom: 35px;
+} */
+
+
+.focusFreeze{
+    height: 80px !important;
+    padding-bottom: 35px !important;
+}
+
+#add_task_input:hover{
+    border: 2px solid #292937;
+}
+
+.task_date_picker{
+    width: 97%;
+    position: absolute;
+    bottom: 1px;
+    left: 12px;
+    height: 28px;
+    padding: 2px;
+    margin-bottom: 6px;
+    /* border-radius: 6px; */
+}
+
+#add_task_due_date_icon{
+    background-color: inherit;
+    min-width: 16px;
+    padding: 0;
+    border-radius: 30px;
+    margin-top: 2px;
+    font-size: 19px;
+    height: 20px;
+    margin-right: 7px;
+    cursor: pointer;
+}
+
+.add_task_due_date{
+    color: hsl(240deg 7% 62%);
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+.show_date_picker{
+    display: block !important;
+    color: #83838c;
+    font-size: 12px;
+    margin-top: 13px;
+}
+
+.show_date_picker>.react-datetime-picker__wrapper{
+    border-radius: 6px;
+    border: 2px solid #47525d;
+}
+
+.due_date_calender{
+   color: black !important;
+}
+
+.hide_date_picker{
+    display: none !important;
+}
+
+.due_date_from_now_text{
+    position: relative;
+}
+
+.due_date_from_now_text::after{
+    content: "";
+    position: absolute;
+    left: -8px;
+    top: 7px;
+    background-color: #808296;
+    width: 4px;
+    height: 4px;
+    border-radius: 30px;
+}
+
+.pending_task_container{
+    width: 100%;
+}
+

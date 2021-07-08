@@ -1,0 +1,5 @@
+@media screen and (max-width: 500px){
+    .error{
+        font-size: 9px !important;
+    }
+}

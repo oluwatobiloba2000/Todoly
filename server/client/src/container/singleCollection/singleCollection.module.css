@@ -1,0 +1,17 @@
+.tasks_list_container{
+    width: 728px;
+}
+
+@media all and (max-width: 775px){
+    .tasks_list_container{
+        width: 93% !important;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .collection_title{
+        font-size: 16px !important;
+        display: flex !important;
+        align-items: center !important;
+    }
+}

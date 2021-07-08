@@ -1,0 +1,38 @@
+#nav_add_collection_btn{
+    height: 22px;
+    min-width: 22px;
+    font-size: 22px;
+    margin-top: 7px;
+    color: white;
+    background: linear-gradient(57deg, rgba(187,63,221,1) 0%, rgba(251,109,169,1) 50%, rgba(255,159,124,1) 100%);
+}
+
+.nav_add_collection_btn:hover{
+    background: linear-gradient(57deg, rgba(187,63,221,1) 0%, rgba(251,109,169,1) 50%, rgba(255,159,124,1) 100%);
+    opacity: 0.7;
+}
+
+.nav_profile_img{
+    width: 35px;
+    height: 35px;
+    border-radius: 37px;
+}
+
+#nav_profile_img_btn{
+    background-color: inherit;
+    /* margin: 10px 20px; */
+    width: 35px;
+    height: 40px;
+    padding: 0;
+    border-radius: 30px;
+}
+
+.dash_nav{
+    display: flex;
+    align-items: center;
+}
+
+
+.dashboard_icon{
+    font-size: 1.5rem;
+}

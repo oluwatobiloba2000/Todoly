@@ -1,0 +1,20 @@
+html,
+body{
+    font-family: 'Poppins', sans-serif !important;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+@font-face {
+    font-family: 'dusha';
+    src: local('dusha'), url(Dusha\ font/Dusha.ttf) format('truetype');
+}
+
+.retry_btn:hover, .retry_btn:active{
+    background: linear-gradient(to left, #3f1669, #dc0f76)
+}
+
+.retry_btn:focus{
+    border: 2px solid white !important;
+}
+
