@@ -21,6 +21,7 @@ import { add_user } from '../../app/slice/authSlice/auth';
 import { useQuery } from '../../Hook/useQuery';
 import { request } from 'graphql-request';
 import { isTokenExpired, saveTokenInLocalStorage } from '../../utils/auth';
+import { url } from '../..';
 
 const Home = () => {
     const history = useHistory()
@@ -44,7 +45,7 @@ const Home = () => {
             error: null,
             loading: true
         })
-        request('http://localhost:3000/graphql', Login, data)
+        request(url, Login, data)
             .then((dataFromRequest) => {
                 setRequestState({
                     loading: false
@@ -83,7 +84,7 @@ const Home = () => {
             error: null,
             loading: true
         })
-        request('http://localhost:3000/graphql', Signup, data)
+        request(url, Signup, data)
             .then((dataFromRequest) => {
                 setSignupRequestState({
                     loading: false

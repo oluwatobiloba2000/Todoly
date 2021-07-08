@@ -23,6 +23,7 @@ import { clearTokenInLocalStorage, getTokenFromLocalStorage, isTokenExpired } fr
 import { CompletedTask, deleteTaskQuery, editTaskQuery, unCompleteTaskQuery } from '../../graphQl/mutation';
 import { useDispatch } from 'react-redux';
 import { complete_task, delete_task, uncomplete_task, update_task } from '../../app/slice/collectionSlice/collection';
+import { url } from '../..';
 dayjs.extend(relativeTime)
 
 export default function Task({ status, text, id, primaryCustomColor, dueDate }) {
@@ -47,7 +48,7 @@ export default function Task({ status, text, id, primaryCustomColor, dueDate }) 
 
         setloadingChangeState(true)
 
-        request('http://localhost:3000/graphql', CompletedTask,
+        request(url, CompletedTask,
             {
                 token,
                 taskId: id
@@ -74,7 +75,7 @@ export default function Task({ status, text, id, primaryCustomColor, dueDate }) 
 
         setEditLoading(true)
 
-        request('http://localhost:3000/graphql', editTaskQuery,
+        request(url, editTaskQuery,
             {
                 token,
                 taskId: id,
@@ -105,7 +106,7 @@ export default function Task({ status, text, id, primaryCustomColor, dueDate }) 
 
         setLoadingDelete(true)
 
-        request('http://localhost:3000/graphql', deleteTaskQuery,
+        request(url, deleteTaskQuery,
             {
                 token,
                 taskId: id
@@ -133,7 +134,7 @@ export default function Task({ status, text, id, primaryCustomColor, dueDate }) 
 
         setloadingChangeState(true)
 
-        request('http://localhost:3000/graphql', unCompleteTaskQuery,
+        request(url, unCompleteTaskQuery,
             {
                 token,
                 taskId: id

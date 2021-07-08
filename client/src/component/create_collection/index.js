@@ -27,6 +27,7 @@ import { clearTokenInLocalStorage, getTokenFromLocalStorage, isTokenExpired } fr
 import { useHistory } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { push_new_collection } from '../../app/slice/collectionSlice/collection'
+import { url } from '../..';
 
 function RadioCard(props) {
     const { getInputProps, getCheckboxProps } = useRadio(props)
@@ -97,7 +98,7 @@ function CreateCollection({ isOpenCollectionModal, onOpenCollectionModal, onClos
             loading: true
         })
 
-        request('http://localhost:3000/graphql', CreateCollectionQuery, 
+        request(url, CreateCollectionQuery, 
               {
                 token,
                 name: data.name,

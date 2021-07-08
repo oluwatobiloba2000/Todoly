@@ -8,7 +8,7 @@ import store from './app/store';
 import { Provider } from 'react-redux';
 import './global_style.css';
 
-
+export const url = 'http://localhost:3000/graphql'
 
 ReactDOM.render(
   <StrictMode>

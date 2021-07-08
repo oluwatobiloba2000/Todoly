@@ -29,6 +29,7 @@ import { BsArrowCounterclockwise, BsArrowLeftShort } from 'react-icons/bs';
 import { FiCloudOff } from 'react-icons/fi';
 import { request } from 'graphql-request';
 import { deleteCollectionQuery } from '../../graphQl/mutation';
+import { url } from '../..';
 
 export default function SingleCollection() {
     const { id } = useParams();
@@ -55,7 +56,7 @@ export default function SingleCollection() {
           error: null,
           loading: true
         })
-        request('http://localhost:3000/graphql', CollectionQuery, {
+        request(url, CollectionQuery, {
           token
         })
           .then((dataFromRequest) => {
@@ -102,7 +103,7 @@ export default function SingleCollection() {
     const deleteCollection = () => {
         setLoadingDeleteCollection(true);
 
-        request('http://localhost:3000/graphql', deleteCollectionQuery, {
+        request(url, deleteCollectionQuery, {
             token,
             collectionId: singleCollection.id
           })

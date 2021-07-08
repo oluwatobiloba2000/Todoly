@@ -11,6 +11,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { request } from 'graphql-request';
 import { add_collection } from '../../app/slice/collectionSlice/collection';
 import { clearTokenInLocalStorage, isTokenExpired } from '../../utils/auth';
+import { url } from '../..';
 
 function Collections({ onOpenCollectionModal, token }) {
 
@@ -45,7 +46,7 @@ function Collections({ onOpenCollectionModal, token }) {
           error: null,
           loading: true
         })
-        request('http://localhost:3000/graphql', CollectionQuery, {
+        request(url, CollectionQuery, {
           token
         })
           .then((dataFromRequest) => {

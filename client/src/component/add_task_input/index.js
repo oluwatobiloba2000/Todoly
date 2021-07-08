@@ -15,6 +15,7 @@ import { clearTokenInLocalStorage, getTokenFromLocalStorage, isTokenExpired } fr
 import { useHistory } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { push_new_task } from '../../app/slice/collectionSlice/collection';
+import { url } from '../..';
 
 dayjs.extend(relativeTime)
 
@@ -42,7 +43,7 @@ export default function AddTaskInput({ primaryCustomColor, collectionId }) {
             loading: true
         })
 
-        request('http://localhost:3000/graphql', CreateTaskQuery, 
+        request(url, CreateTaskQuery, 
               {
                 token,
                 name: data.name,
