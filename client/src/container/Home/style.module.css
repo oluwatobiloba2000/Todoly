@@ -15,7 +15,7 @@
 .form_container{
     border-top-left-radius: 25px;
     width: 300px;
-    height: 540px;
+    min-height: 90%;
     border-top-right-radius: 25px;
     border: 1px solid #323242;
 }
