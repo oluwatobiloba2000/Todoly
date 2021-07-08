@@ -6,7 +6,8 @@
   "author": "Anani Oluwatobiloba",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon ./server.js",
+    "start": "node ./server.js",
+    "start:dev": "nodemon ./server.js",
     "create:db": "npx sequelize db:create",
     "migrate": "npx sequelize db:migrate",
     "generate:migration:file": "npx sequelize model:generate --name",
