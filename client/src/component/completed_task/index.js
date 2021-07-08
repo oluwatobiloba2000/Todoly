@@ -1,28 +1,26 @@
-import React, { useState } from 'react'
+import React, { useMemo } from 'react'
 import {Flex, Text} from '@chakra-ui/react';
 import Task from '../task';
 
-function CompletedTask({primaryCustomColor}) {
-    const [completedTasksCount] = useState(0);
-
-    const data = [{
-        text: 'testing the todo app'
-    },{
-        text: ' It helps to hide content that'
-    }, {
-        text: " to create regions of content that can exp"
-    }, {
-        text: "to create regions of content that can exp"
-    }]
-
+function CompletedTask({primaryCustomColor, singleCollection}) {
+    const completedTasks = useMemo(() => {
+        if (singleCollection && singleCollection.task) {
+              let completedTask =  singleCollection.task.filter((col) => col.isCompleted === true);
+              if(completedTask){
+                  return completedTask;
+              }
+            return null;
+        }
+        return null;
+    }, [singleCollection])
 
 
     return (
-        <Flex flexDirection="column" mb="20px" mt="40px">
-             <Text color="white" mb="20px">Completed Tasks - {completedTasksCount}</Text>
+        (completedTasks && completedTasks.length > 0) && <Flex flexDirection="column" mb="20px" mt="40px">
+             <Text color="white" mb="20px">Completed Tasks - {completedTasks ? completedTasks.length : 0}</Text>
 
-             {data.map((data, index)=>{
-               return <Task status="completed" text={data.text} id={index}
+             { completedTasks.map((data, index)=>{
+               return <Task status="completed" text={data.name} dueDate={data.dueDate} key={data.id} id={data.id}
                     primaryCustomColor={primaryCustomColor}
                 />}
             )}

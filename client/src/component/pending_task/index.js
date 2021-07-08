@@ -1,29 +1,29 @@
-import React, { useState } from 'react'
-import {Flex, Text} from '@chakra-ui/react';
+import React, { useMemo } from 'react'
+import { Flex, Text } from '@chakra-ui/react';
 import Task from '../task';
 
-function PendingTasks({primaryCustomColor}) {
-    const [pendingTasksCount] = useState(0);
-
-    const data = [{
-        text: 'testing the todo app'
-    },{
-        text: ' It helps to hide content that'
-    }, {
-        text: " to create regions of content that can exp"
-    }, {
-        text: "to create regions of content that can exp"
-    }]
-
+function PendingTasks({ primaryCustomColor, singleCollection }) {
+    const pendingTask = useMemo(() => {
+        if (singleCollection && singleCollection.task) {
+            let pendingTask = singleCollection.task.filter((col) => col.isCompleted === false);
+            if (pendingTask) {
+                return pendingTask;
+            }
+            return null;
+        }
+        return null;
+    }, [singleCollection])
 
     return (
-        <Flex flexDirection="column" mb="20px">
-             <Text color="white" mb="20px">Pending Tasks - {pendingTasksCount}</Text>
+        (pendingTask && pendingTask.length > 0) && <Flex flexDirection="column" mb="20px">
+            <Text color="white" mb="20px">Pending Tasks - {pendingTask ? pendingTask.length : 0}</Text>
 
-            {data.map((data, index)=>{
-               return <Task status="not-completed" text={data.text} id={index}
+
+            { pendingTask.map((data) => {
+                return <Task dueDate={data.dueDate} status="not-completed" key={data.id} text={data.name} id={data.id}
                     primaryCustomColor={primaryCustomColor}
-                />}
+                />
+            }
             )}
         </Flex>
     )
