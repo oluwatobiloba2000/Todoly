@@ -45,7 +45,7 @@ function App() {
       error: null,
       loading: true
     })
-    request(url User, {
+    request(url, User, {
       token
     })
       .then((dataFromRequest) => {
