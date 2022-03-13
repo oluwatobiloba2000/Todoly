@@ -136,8 +136,7 @@ const Home = () => {
     const errorDiv = (error) => {
         return <Collapse in={error ? true : false}>
             <Box color="white" fontSize="11px"
-                width="89%"
-
+                width="95%"
                 margin="10px auto 0px auto"
                 display="flex"
                 alignItems="center"
@@ -181,7 +180,7 @@ const Home = () => {
                     {/* login panel */}
                     <TabPanel>
                         {errorDiv(loginError)}
-                        <Flex color="white" justifyContent="center" alignItems="center" m="20px 0px" className="google_auth_container">
+                        <Flex color="white" justifyContent="center" alignItems="center" m="20px 0px" className={style.google_auth_container}>
                             <form onSubmit={submitLogin(login)}>
                                 <FormControl id="email">
                                     <FormLabel>Email address</FormLabel>
@@ -210,7 +209,7 @@ const Home = () => {
                     {/* signup panel */}
                     <TabPanel>
                         {errorDiv(signupError)}
-                        <Flex color="white" justifyContent="center" alignItems="center" m="20px 0px" className="google_auth_container">
+                        <Flex color="white" justifyContent="center" alignItems="center" m="20px 0px" className={style.google_auth_container}>
                             <form onSubmit={submitSignup(signup)}>
                                 <FormControl>
                                     <FormLabel>Email address</FormLabel>

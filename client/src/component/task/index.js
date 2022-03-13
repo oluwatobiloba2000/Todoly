@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Flex, Text, Button, IconButton, Icon, Textarea, Collapse, useBoolean, useToast } from '@chakra-ui/react';
-import { BiDotsVerticalRounded, BiCheck, BiEditAlt, BiCalendar } from 'react-icons/bi';
+import { BiDotsVerticalRounded, BiCheck, BiEditAlt } from 'react-icons/bi';
 import { AiOutlineDelete, AiTwotoneDelete } from 'react-icons/ai';
 import dayjs from 'dayjs';
 import relativeTime from 'dayjs/plugin/relativeTime';
@@ -10,13 +10,8 @@ import {
     MenuItem,
     MenuGroup,
     MenuButton,
-    // Alert,
-    // AlertIcon,
-    // AlertTitle,
-    // AlertDescription,
 } from "@chakra-ui/react"
 import { Spinner } from "@chakra-ui/react";
-// import style from './task.module.css';
 import { useHistory, useParams } from 'react-router-dom';
 import { request } from 'graphql-request';
 import { clearTokenInLocalStorage, getTokenFromLocalStorage, isTokenExpired } from '../../utils/auth';
@@ -230,21 +225,19 @@ export default function Task({ status, text, id, primaryCustomColor, dueDate }) 
                                 {text && text}
                             </Text>
                             {dueDate && <Flex
-                                opacity="0.7"
-                                color="white"
+                                opacity='0.7'
                                 marginTop="5px"
                                 alignItems="center"
-                                paddingLeft="5px"
-                                marginLeft="9px"
-                                backgroundColor="#350707"
-                                paddingRight="5px"
                                 borderRadius="6px"
+                                color="#ff5d5d"
+                                padding="3px 10px"
+                                margin="5px 0 5px 10px"
+                                backgroundColor="#00000000"
                                 border="1px solid #883535"
                                 fontSize="11px">
                                 Due
-                                <Icon as={BiCalendar} marginRight="10px" color="#dbbe56" marginLeft="7px" appearance="none" />
-                                <Text fontSize="11px">{dayjs(dueDate).format("dddd [,] D MMM YYYY [at] h [:] mm a")}</Text>
-                                <Text fontSize="11px" ml="20px">{dayjs(dueDate).fromNow()}</Text>
+                                <Text fontSize="11px" ml='2px' mr='2px'>{dayjs(dueDate).fromNow()}</Text>
+                                <Text fontSize="11px">{dayjs(dueDate).format(" [at] h [:] mm a")}</Text>
                             </Flex>
                             }
                         </Flex>
@@ -254,21 +247,19 @@ export default function Task({ status, text, id, primaryCustomColor, dueDate }) 
                                 {text && text}
                             </Text>
 
-                            {dueDate && <Flex
-                                color="white"
+                            {dueDate &&<Flex
                                 marginTop="5px"
                                 alignItems="center"
-                                paddingLeft="5px"
-                                marginLeft="9px"
-                                backgroundColor="#350707"
-                                paddingRight="5px"
                                 borderRadius="6px"
+                                color="#ff5d5d"
+                                padding="3px 10px"
+                                margin="5px 0 5px 10px"
+                                backgroundColor="#00000000"
                                 border="1px solid #883535"
                                 fontSize="11px">
                                 Due
-                                <Icon as={BiCalendar} marginRight="10px" color="#dbbe56" marginLeft="7px" appearance="none" />
-                                <Text fontSize="11px">{dayjs(dueDate).format("dddd [,] D MMM YYYY [at] h [:] mm a")} {dayjs(dueDate).fromNow()}</Text>
-                                <Text fontSize="11px" ml="20px">- {dayjs(dueDate).fromNow()}</Text>
+                                <Text fontSize="11px" ml='2px' mr='2px'>{dayjs(dueDate).fromNow()}</Text>
+                                <Text fontSize="11px">{dayjs(dueDate).format(" [at] h [:] mm a")}</Text>
                             </Flex>
                             }
                         </Flex>
